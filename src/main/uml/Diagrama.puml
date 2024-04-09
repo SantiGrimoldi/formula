@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface Term {
+     result(variableValue : Map<String, Int>) : int
+     print() : String
+ }
+
+interface Operation extends Term{
+    value1 : Term
+    value2 : Term
+}
+
+interface SingleOp extends Term {
+}
+
+class Variable implements Term{
+    name : String
+}
+
+class Number implements Term {
+    value : int
+}
+
+class Sum implements Operation {
+
+}
+
+class Substraction implements Operation {
+
+}
+
+class Multiplication implements Operation {
+}
+
+class Division implements Operation {
+}
+
+class Square implements SingleOp {
+}
+
+class SquareRoot implements SingleOp {
+}
+
+class Module implements SingleOp {
+}
+
+@enduml
